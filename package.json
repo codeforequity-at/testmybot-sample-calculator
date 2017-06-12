@@ -1,0 +1,34 @@
+{
+  "name": "testmybot-sample-calculator",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=4.0"
+  },
+  "description": "Testmybot Sample Chatbot: Calculator",
+  "main": "index.js",
+  "scripts": {
+    "start_testmybot": "page_token=test verify_token=test node index.js",
+    "test": "node jasmine.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codeforequity-at/testmybot-sample-calculator.git"
+  },
+  "author": "Florian Treml",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codeforequity-at/testmybot-sample-calculator/issues"
+  },
+  "homepage": "https://github.com/codeforequity-at/testmybot-sample-calculator#readme",
+  "devDependencies": {
+    "jasmine": "^2.6.0",
+    "jasmine-reporters": "^2.2.1",
+    "testmybot": "*",
+    "testmybot-chat": "*",
+		"testmybot-fbmock": "*"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "botkit": "^0.5.4"
+  }
+}

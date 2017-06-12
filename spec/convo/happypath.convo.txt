@@ -1,0 +1,31 @@
+The Happy Path - 1 + 2 = 3
+
+#me
+start
+
+#bot
+I can do a very advanced scientific calculations for you ("Addition").
+
+#bot
+Please tell me the first number!
+
+#me
+1
+
+#bot
+Please tell me the second number!
+
+#me
+2
+
+#bot
+1 + 2 = 3
+
+#bot
+Is this correct ?
+
+#me
+yes
+
+#bot
+I know.
