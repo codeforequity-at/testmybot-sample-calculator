@@ -1,2 +1,6 @@
-# testmybot-sample-calculator
-Testmybot Sample Chatbot: Calculator
+# Testmybot Sample Chatbot: Calculator
+
+This is a very advanced scientific calculator, wrapped into a Chatbot!
+
+For demonstration purposes.
+
