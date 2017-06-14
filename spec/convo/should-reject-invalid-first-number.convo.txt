@@ -1,0 +1,20 @@
+should reject invalid first number
+
+#me
+start
+
+#bot
+I can do a very advanced scientific calculations for you ("Addition").
+
+#bot
+Please tell me the first number!
+
+#me
+A
+
+#bot
+"A" is not a number!
+
+#bot
+Please tell me the first number!
+

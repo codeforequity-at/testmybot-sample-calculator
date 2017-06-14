@@ -1,0 +1,9 @@
+should show menu
+
+#me
+test
+
+#bot
+Try: `start` or `calculate`
+
+
