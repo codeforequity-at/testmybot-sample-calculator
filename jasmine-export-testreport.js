@@ -5,5 +5,3 @@ var htmlReportConfig = {
   outputPath: '.'
 };
 new HTMLReport().from(__dirname + '/junitresults.xml', htmlReportConfig);
-
-//http://testmybot-sample-calculator.s3-website-eu-west-1.amazonaws.com
