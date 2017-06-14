@@ -6,7 +6,7 @@ botkitHelper.wireWithBotkit(() => require('./src/bot')('page_token', 'verify_tok
 
 var junitReporter = new reporters.JUnitXmlReporter({
   savePath: __dirname,
-  consolidateAll: false
+  consolidateAll: true
 });
 
 const jasmine = new Jasmine();
