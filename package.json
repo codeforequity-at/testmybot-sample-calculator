@@ -24,6 +24,7 @@
   "devDependencies": {
     "jasmine": "^2.6.0",
     "jasmine-reporters": "^2.2.1",
+    "jasmine-xml2html-converter": "0.0.2",
     "testmybot": "*",
     "testmybot-chat": "*"
   },
