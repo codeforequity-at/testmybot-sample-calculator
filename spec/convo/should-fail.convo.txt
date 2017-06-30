@@ -1,0 +1,9 @@
+should fail
+
+#me
+test
+
+#bot
+Something the bot would never say
+
+
