@@ -9,7 +9,9 @@
   "scripts": {
     "start_testmybot": "page_token=test verify_token=test node index.js",
     "test": "node jasmine.js",
-    "test-export": "node jasmine-export-testreport.js"
+    "test-export": "node jasmine-export-testreport.js",
+    "chat": "node chat.js",
+    "ide": "node ide.js"
   },
   "repository": {
     "type": "git",
