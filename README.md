@@ -21,3 +21,4 @@ Every Push to this repository triggers an automated test run on Codeship. The te
 	$ npm run-script test-export
 	$ aws s3 cp test-html-report.html s3://testmybot-sample-calculator/test-html-report.$(date +'%Y_%m_%d_%H%M').html	
 	
+
