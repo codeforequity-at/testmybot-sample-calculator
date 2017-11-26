@@ -7,6 +7,8 @@ module.exports = function(bot, message) {
 
     convo.say('I can do a very advanced scientific calculations for you ("Addition").');
     convo.ask('Please tell me the first number!', function(response, convo) {
+      if (response.text === 'cancel') return convo.next();
+      
       var number1 = parseInt(response.text);
       
       if (isNaN(number1)) {
@@ -15,6 +17,7 @@ module.exports = function(bot, message) {
         convo.next();
       } else {
         convo.ask('Please tell me the second number!', function(response, convo) {
+          if (response.text === 'cancel') return convo.next();
         
           var number2 = parseInt(response.text);
           
@@ -40,6 +43,12 @@ module.exports = function(bot, message) {
                   convo.next();
                 }
               },
+              {
+                pattern: 'cancel',
+                callback: function(response, convo) {
+                  convo.next();
+                }
+              },              
               {
                 default: true,
                 callback: function(response, convo) {
