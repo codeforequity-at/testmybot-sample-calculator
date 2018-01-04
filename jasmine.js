@@ -1,15 +1,4 @@
-const Jasmine = require('jasmine');
-const reporters = require('jasmine-reporters');
-const botkitHelper = require('testmybot/helper/botkit');
+const bot = require('testmybot');
 
-botkitHelper.wireWithBotkit(() => require('./src/bot')('page_token', 'verify_token'));
-
-var junitReporter = new reporters.JUnitXmlReporter({
-  savePath: __dirname,
-  consolidateAll: true
-});
-
-const jasmine = new Jasmine();
-jasmine.addReporter(junitReporter);
-jasmine.loadConfigFile('./spec/support/jasmine.json');
-jasmine.execute();
+bot.helper.botkit().wireWithBotkit(() => require('./src/bot')('page_token', 'verify_token'));
+bot.helper.jasmine().generateJUnit();

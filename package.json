@@ -8,11 +8,8 @@
   "main": "index.js",
   "scripts": {
 	"start": "node index.js",
-    "start_testmybot": "page_token=test verify_token=test node index.js",
     "test": "node jasmine.js",
-    "test-export": "node jasmine-export-testreport.js",
-    "chat": "node chat.js",
-    "ide": "node ide.js"
+    "test-export": "node jasmine-export-testreport.js"
   },
   "repository": {
     "type": "git",
@@ -28,11 +25,9 @@
     "jasmine": "^2.6.0",
     "jasmine-reporters": "^2.2.1",
     "jasmine-xml2html-converter": "0.0.2",
-    "testmybot": "*",
-    "testmybot-chat": "*"
+    "testmybot": "*"
   },
   "dependencies": {
-    "bluebird": "^3.5.0",
-    "botkit": "^0.5.4"
+    "botkit": "^0.6.7"
   }
 }

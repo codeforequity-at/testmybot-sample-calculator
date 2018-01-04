@@ -17,6 +17,6 @@ module.exports = function(page_token, verify_token) {
     bot.reply(message, 'Try: `start` or `calculate`');
     return false;
   });
-  
+
   return controller;
 };
