@@ -1,4 +1,18 @@
-var Botkit = require('botkit');
+const Botkit = require('botkit');
+const Botanalytics = require('botanalytics').FacebookMessenger('BOTANALYTICS_TOKEN')
+
+const _configureMonitoring = (controller) => {
+  controller.middleware.receive.use((bot, message, next) => {
+    Botanalytics.logIncomingMessage(message, (err) => {
+      next();
+    });
+  });
+  controller.middleware.send.use((bot, message, next) => {
+    Botanalytics.logOutgoingMessage(message, message.channel || 'unknown', null, (err) => {
+      next();
+    } );
+  });
+}
 
 module.exports = function(page_token, verify_token) {
 
@@ -17,6 +31,8 @@ module.exports = function(page_token, verify_token) {
     bot.reply(message, 'Try: `start` or `calculate`');
     return false;
   });
+
+  _configureMonitoring(controller)
 
   return controller;
 };

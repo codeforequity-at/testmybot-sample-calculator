@@ -7,7 +7,7 @@
   "description": "Testmybot Sample Chatbot: Calculator",
   "main": "index.js",
   "scripts": {
-	"start": "node index.js",
+    "start": "node index.js",
     "test": "node jasmine.js",
     "test-export": "node jasmine-export-testreport.js"
   },
@@ -28,6 +28,7 @@
     "testmybot": "^1.0.0"
   },
   "dependencies": {
+    "botanalytics": "^2.5.3",
     "botkit": "^0.6.7"
   }
 }
