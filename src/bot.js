@@ -1,5 +1,5 @@
 const Botkit = require('botkit');
-const BotanalyticsConfig = require('BotanalyticsConfig.json')
+const BotanalyticsConfig = require('./BotanalyticsConfig.json')
 const Botanalytics = require('botanalytics').FacebookMessenger('BOTANALYTICS_TOKEN', BotanalyticsConfig)
 
 const _configureMonitoring = (controller) => {
