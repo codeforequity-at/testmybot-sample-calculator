@@ -1,6 +1,7 @@
 const Botkit = require('botkit');
-const BotanalyticsConfig = require('./BotanalyticsConfig.json')
-const Botanalytics = require('botanalytics').FacebookMessenger('BOTANALYTICS_TOKEN', BotanalyticsConfig)
+const Botanalytics = require('botanalytics').FacebookMessenger(process.env.BOTANALYTICS_TOKEN, {
+  "baseUrl": process.env.BOTANALYTICS_BASE_URL
+})
 
 const _configureMonitoring = (controller) => {
   controller.middleware.receive.use((bot, message, next) => {
