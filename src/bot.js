@@ -1,8 +1,12 @@
 const Botkit = require('botkit');
-const Botanalytics = require('botanalytics').FacebookMessenger(process.env.BOTANALYTICS_TOKEN, {
-  "baseUrl": process.env.BOTANALYTICS_BASE_URL,
-  ...(process.env.BOTANALYTICS_DEBUG ? {debug: process.env.BOTANALYTICS_DEBUG === 'true'} : {})
-})
+const botanalyticsConfig = {
+  "baseUrl": process.env.BOTANALYTICS_BASE_URL
+}
+process.env.BOTANALYTICS_DEBUG = 'true'
+if (process.env.BOTANALYTICS_DEBUG) {
+  botanalyticsConfig.debug = process.env.BOTANALYTICS_DEBUG === 'true'
+}
+const Botanalytics = require('botanalytics').FacebookMessenger(process.env.BOTANALYTICS_TOKEN, botanalyticsConfig)
 console.log('Botanalytics initialized');
 
 const _configureMonitoring = (controller) => {
