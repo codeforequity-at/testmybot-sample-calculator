@@ -2,24 +2,23 @@ const Botkit = require('botkit');
 const botanalyticsConfig = {
   "baseUrl": process.env.BOTANALYTICS_BASE_URL
 }
-process.env.BOTANALYTICS_DEBUG = 'true'
-if (process.env.BOTANALYTICS_DEBUG) {
-  botanalyticsConfig.debug = process.env.BOTANALYTICS_DEBUG === 'true'
-}
+// if (process.env.BOTANALYTICS_DEBUG) {
+//   botanalyticsConfig.debug = process.env.BOTANALYTICS_DEBUG === 'true'
+// }
 const Botanalytics = require('botanalytics').FacebookMessenger(process.env.BOTANALYTICS_TOKEN, botanalyticsConfig)
 console.log('Botanalytics initialized');
 
 const _configureMonitoring = (controller) => {
   console.log('Botanalytics monitoring configured');
   controller.middleware.receive.use((bot, message, next) => {
-    console.log(`Botanalytics incoming message: ${JSON.stringify(message)}`)
+    // console.log(`Botanalytics incoming message: ${JSON.stringify(message)}`)
     Botanalytics.logIncomingMessage(message, (err) => {
       next();
     });
   });
 
   controller.middleware.send.use((bot, message, next) => {
-    console.log(`Botanalytics outgoing message: ${JSON.stringify(message)}`)
+    // console.log(`Botanalytics outgoing message: ${JSON.stringify(message)}`)
     Botanalytics.logOutgoingMessage(message, message.channel || 'unknown', null, (err) => {
       next();
     } );
