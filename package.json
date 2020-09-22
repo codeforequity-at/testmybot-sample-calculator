@@ -30,6 +30,6 @@
   "dependencies": {
     "botanalytics": "^2.5.3",
     "botkit": "^0.6.7",
-    "skills-validator": "./node_modules/botbuilder/skills-validator/skills-validator-1.0.0.tgz"
+    "skills-validator": "./skills-validator/skills-validator-1.0.0.tgz"
   }
 }
