@@ -8,12 +8,10 @@ if (!process.env.verify_token) {
   process.exit(1);
 }
 
-console.log('Found page_token, and verify_token');
-
 var controller = require('./src/bot')(process.env.page_token, process.env.verify_token);
 var bot = controller.spawn({
 });
-
+  
 controller.setupWebserver(process.env.PORT || 3000, function(err, webserver) {
   controller.createWebhookEndpoints(webserver, bot, function() {
     console.log('ONLINE!');
