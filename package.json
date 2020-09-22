@@ -1,35 +1,18 @@
 {
-  "name": "testmybot-sample-calculator",
+  "name": "botkit-testmybotsampleattila2",
   "version": "1.0.0",
-  "engines": {
-    "node": ">=4.0"
-  },
-  "description": "Testmybot Sample Chatbot: Calculator",
-  "main": "index.js",
+  "description": "",
+  "main": "bot.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "node jasmine.js",
-    "test-export": "node jasmine-export-testreport.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/codeforequity-at/testmybot-sample-calculator.git"
-  },
-  "author": "Florian Treml",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/codeforequity-at/testmybot-sample-calculator/issues"
-  },
-  "homepage": "https://github.com/codeforequity-at/testmybot-sample-calculator#readme",
-  "devDependencies": {
-    "jasmine": "^2.6.0",
-    "jasmine-reporters": "^2.2.1",
-    "jasmine-xml2html-converter": "0.0.2",
-    "testmybot": "^1.0.0"
+    "start": "node bot.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "botanalytics": "^2.5.3",
-    "botkit": "^0.6.7",
-    "skills-validator": "./skills-validator/skills-validator-1.0.0.tgz"
+    "botbuilder-adapter-facebook": "^1.0.11",
+    "botbuilder-storage-mongodb": "^0.9.5",
+    "botkit": "^4.10.0",
+    "botkit-plugin-cms": "^1.0.3",
+    "dotenv": "^7.0.0"
   }
 }
