@@ -4,6 +4,9 @@
 
 // This is the main file for the Testmybotsampleattila2 bot.
 
+// Load process.env values from .env file
+require('dotenv').config();
+
 // Import Botkit's core features
 const { Botkit } = require('botkit');
 const { BotkitCMSHelper } = require('botkit-plugin-cms');
@@ -16,9 +19,6 @@ const Botanalytics = require('botanalytics').FacebookMessenger(process.env.BOTAN
 const { FacebookAdapter, FacebookEventTypeMiddleware } = require('botbuilder-adapter-facebook');
 
 const { MongoDbStorage } = require('botbuilder-storage-mongodb');
-
-// Load process.env values from .env file
-require('dotenv').config();
 
 let storage = null;
 if (process.env.MONGO_URI) {
