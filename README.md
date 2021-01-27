@@ -1,6 +1,8 @@
 # Botkit Starter Kit
 
-This is a Botkit starter kit for facebook, created with the [Yeoman generator](https://github.com/howdyai/botkit/tree/master/packages/generator-botkit#readme) with [Botanalytics](https://botanalytics.co/) integration.
+This is a Botkit starter kit for facebook, created with the [Yeoman generator](https://github.com/howdyai/botkit/tree/master/packages/generator-botkit#readme).
+
+[Botanalytics](https://botanalytics.co/) integration included.
 
 To complete the configuration of this bot, make sure to update the included `.env` file with your platform tokens and credentials.
 
